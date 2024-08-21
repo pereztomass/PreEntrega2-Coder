@@ -64,7 +64,7 @@
         <div class="search-container">
           <form action="/buscar" method="get">
             <input type="text" placeholder="Buscar.." name="search" required />
-            <button type="submit"><i class="fas fa-search"></i></button>
+            <button class="iconobusqueda" type="submit"><i class="fas fa-search"></i></button>
           </form>
         </div>
         <!-- Class: la clase va para identificar el elemento en css -->
@@ -72,7 +72,16 @@
           <ul class="paginas">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="sabores.html">Sabores</a></li>
-            <li><a href="productos.html">Productos</a></li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Productos
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Helados</a>
+                <a class="dropdown-item" href="#">Baldes</a>
+                <a class="dropdown-item" href="#">Comida rápida</a>
+              </div>
+            </div>
             <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
@@ -147,7 +156,7 @@
         ></iframe>
       </section>
       <div class="container mt-5">
-        <h2 class="text-center mb-4">Contactanos</h2>
+        <h2 class="text-center mb-4">Ponte en contacto con nosotros</h2>
         <form class="form">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
