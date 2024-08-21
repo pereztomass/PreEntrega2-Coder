@@ -357,3 +357,29 @@ hr {
 .mt-3 {
     margin-top: 0rem !important;
 }
+
+/* Estilo para el título de la galería */
+.photo-gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para cada elemento de la galería */
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efecto de zoom al hacer hover sobre la imagen */
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Asegúrate de que las imágenes se ajusten bien dentro de su contenedor */
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
