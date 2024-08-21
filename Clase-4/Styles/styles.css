@@ -126,7 +126,8 @@ button i {
     font-size: 18px;
 }
 
-input[type="text"] {
+
+input{
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -134,11 +135,13 @@ input[type="text"] {
     font-family: inter;
     padding: 10px;
     font-size: 16px;
-    color: white;
+    color: #10069F;
     width: 200px;
     outline: none;
     background-color: #10069F;
+
 }
+
 
 .paginas {
     color: white;
@@ -216,4 +219,12 @@ hr {
 .img-historia {
     width: 250px;
     height: auto;
+}
+
+.form {
+    display: grid;
+}
+
+.form-control {
+    background-color: white;
 }
