@@ -91,8 +91,57 @@ header {
 
 .dropdown {
     align-content: center;
+    position: relative;
 }
 
+.dropdown-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #10069F;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #08034b;
+}
+
+/* Mostrar el menú desplegable al pasar el ratón sobre el contenedor */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mostrar el menú desplegable en dispositivos móviles cuando el botón hamburguesa está activo */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        display: none;
+    }
+
+    .navbar .paginas.active .dropdown-menu {
+        display: block;
+    }
+}
 
 .search-container form {
     display: flex;
@@ -365,7 +414,7 @@ hr {
   }
   
   /* Estilo para cada elemento de la galería */
-  .gallery-item {
+.gallery-item {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -373,13 +422,75 @@ hr {
   }
   
   /* Efecto de zoom al hacer hover sobre la imagen */
-  .gallery-item:hover {
+.gallery-item:hover {
     transform: scale(1.05);
   }
   
   /* Asegúrate de que las imágenes se ajusten bien dentro de su contenedor */
-  .gallery-item img {
+.gallery-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
+
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Estilo responsive */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr 1fr 1fr; /* Ajuste de columnas en pantallas pequeñas */
+        grid-template-rows: 1fr;
+        gap: 10px;
+    }
+
+    .logo {
+        justify-self: center;
+    }
+
+    .search-container {
+        order: 2;
+        grid-column: span 2;
+        justify-self: center;
+    }
+
+    .navbar {
+        order: 2;
+        grid-column: span 2;
+        justify-self: end;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .paginas {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: #10069F;
+    }
+
+    .navbar .paginas.active {
+        display: flex;
+    }
+
+    .navbar .paginas li {
+        margin: 0.5em 0;
+    }
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
